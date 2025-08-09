@@ -46,7 +46,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <div className="stat-value">2514.02</div>
+            <div className="points-text">2514.02</div>
           </div>
           <div className="stat-card">
             <div className="stat-left">
@@ -61,7 +61,7 @@ const Dashboard = () => {
               </div>
             </div>
 
-            <div className="stat-value">2514.02</div>
+            <div className="points-text">2514.02</div>
           </div>
         </div>
 
