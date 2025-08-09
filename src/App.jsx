@@ -13,33 +13,29 @@ import Header from "./common/Header";
 import './index.css'
 import Tokenmoics from "./components/Tokenomics";
 import Footer from "./common/Footer";
+import DashboardHeader from "./common/dashboardHeader/DashboardHeader";
+import DashboardSidebar from "./common/dashboardSidebar/DashboardSidebar";
+import AppShell from "./pages/Appshell";
 
 function App() {
   return (
     <>
-      {/* <Navbar bg="dark" variant="dark" expand="lg">
-        <Container>
-          <Navbar.Brand href="#">CRT</Navbar.Brand>
-          <Nav className="ms-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Button variant="outline-light" className="ms-2">Contact</Button>
-          </Nav>
-        </Container>
-      </Navbar> */}
+ 
 
-      <Header />
+      {/* <Header />
       <Hero />
-      <WhatSeparatesCRT />
+      <WhatSeparatesCRT /> */}
       {/* <CRTEdge /> */}
-      <TradingWithoutLimits />
+      {/* <TradingWithoutLimits />
       <ConnectSteps />
       <AdaptiveCore />
       <Tokenmoics/>
       <Roadmap />
       <Faq />
-      <Footer/>
+      <Footer/> */}
+      {/* <DashboardHeader/>
+      <DashboardSidebar/> */}
+      <AppShell/>
     </>
   );
 }

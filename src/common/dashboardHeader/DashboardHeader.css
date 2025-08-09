@@ -1,0 +1,71 @@
+.topbar {
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-w);             /* shift right by sidebar width */
+    right: 0;
+    height: var(--header-h);
+    width: calc(100% - var(--sidebar-w));
+    background: linear-gradient(90deg,#252229 0%,#222027 31%,#1c1a23 100%);
+    z-index: 900;                       /* below sidebar */
+  }
+  .topWrapper {                          /* keep as-is */
+    display: flex;
+    padding: 13px 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+.logo {
+  font-weight: bold;
+  font-size: 40px;
+  color: darkblue;
+}
+
+.topbarIconContainer {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.topIconBadge {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: -5px;
+  display: flex;
+  right: 0px;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+.topAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.topleft {
+  display: flex;
+  gap: 10px;
+  /* align-items: center; */
+}
+.top-right-btn {
+  padding: 15px 50px;
+  color: white;
+  background: linear-gradient(90deg, #4b28a9 0%, #c655ae 85%, #c655ae 100%);
+  border-radius: 12px;
+  border: none;
+}
+.address {
+  color: #fff3fe;
+}
+.crtno {
+  background: linear-gradient(90deg, #4b28a9 0%, #c655ae 85%, #c655ae 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For Firefox */
+  color: transparent;
+  font-weight: bold;
+  margin-bottom: 2px;
+}

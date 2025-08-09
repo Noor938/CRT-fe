@@ -35,7 +35,7 @@ const Faq = () => {
       <div className="section-inner">
         <h2 className="heading-xl text-gradient text-center mb-5">Frequently Asked Questions</h2>
 
-        <div className="faq-list">
+        <div className="F">
           {faqs.map((item, idx) => (
             <div className="faq-item" key={idx}>
               <div className="faq-question" onClick={() => toggle(idx)}>

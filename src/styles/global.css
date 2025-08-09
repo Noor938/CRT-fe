@@ -1167,3 +1167,97 @@ flex-shrink: 0;
 }
 
 /* rest of styles (hero-left, presale-card, etc.) remain unchanged */
+@media (max-width: 1024px){
+  .topbar {
+    left: 0;
+    width: 100%;
+  }
+  .page {
+    margin-left: 0;
+    padding: calc(var(--header-h) + 16px) 16px 32px;
+  }
+  /* If you use a mobile drawer for sidebar, hide the fixed one: */
+  .sidebar { display: none; }
+}
+.presale-text{
+  background: linear-gradient(90deg, #2274E9 0%, #14427F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Firefox */
+  color: transparent;
+  font-size: 55px;
+ 
+}
+
+
+/* wrapper */
+.stat-card{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 22px;
+  border-radius: 14px;
+
+  /* dark glassy panel + subtle texture */
+  background:
+    radial-gradient(120px 80px at 96% 10%, rgba(34,116,233,.22), transparent 60%),
+    radial-gradient(220px 140px at 80% -10%, rgba(34,116,233,.10), transparent 70%),
+    linear-gradient(180deg, #1E1E36 0%, #211d2c 50%);
+
+
+}
+
+/* 1px neon border using masked pseudo */
+.stat-card::before{
+  content:"";
+  position:absolute; inset:0; border-radius:14px;
+  padding:1px;                     /* border thickness */
+  background: linear-gradient(90deg, rgba(39,119,233,.6), rgba(19,29,48,.2));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events:none;
+}
+
+/* top-right glow pillt) */
+.stat-card::after{
+  content:"";
+  position:absolute;
+  top:6px; right:10px;
+  width:110px; height:46px;
+  border-radius:22px;
+  /* background: radial-gradient(80px 40px at 80% 20%, rgba(34,116,233,.55), rgba(34,116,233,0) 70%); */
+  filter: blur(2px);
+  pointer-events:none;
+}
+
+/* left block */
+.stat-left{ display:flex; align-items:center; gap:14px; min-width:0; }
+.stat-ico{
+  width:44px; height:44px;
+  border-radius:10px;
+  display:grid; place-items:center;
+  background: linear-gradient(180deg, rgba(41,73,160,.12), rgba(14,13,14,0) 70%);
+  box-shadow: inset 0 0 0 1px rgba(43,111,233,.25);
+}
+
+.stat-meta{ min-width:0; }
+.stat-title{ color: #FFF3FE; font-weight:700; font-size:16px; line-height:1.1; }
+.stat-sub{ color: white; font-size:13px; margin-top:4px; }
+
+/* right value with blue gradient text */
+.stat-value{
+  font-weight:800;
+  font-size:28px;
+  letter-spacing:.2px;
+  background: linear-gradient(90deg, #1a47b8 0%, #2274E9 45%, #14427F 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+  background-clip:text;
+  color: transparent;
+  white-space: nowrap;
+}
