@@ -7,7 +7,7 @@ import buy from '../../assets/img/buy.svg'
 import twiter from '../../assets/img/twitter2.svg'
 import tele from '../../assets/img/tele2.svg'
 import vector from '../../assets/img/vector.svg'
-import crt from '../../assets/img/crt.svg'
+import crt from '../../assets/img/twitter2.svg'
 
 
 

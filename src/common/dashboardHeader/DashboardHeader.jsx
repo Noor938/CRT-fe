@@ -9,7 +9,7 @@ export default function DashboardHeader() {
         <div className="topleft">
           <img src={avatar} alt="" className="topAvatar" />
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <span className="address">0xE251....521f</span>
+            <span  className="address">0xE251....521f</span>
             <p className="crtno">12 CRT</p>
           </div>
         </div>

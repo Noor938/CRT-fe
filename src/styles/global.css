@@ -1001,6 +1001,15 @@ flex-shrink: 0;
   }
 }
 @media (max-width: 768px) {
+  .dashbaord-cards{
+    grid-template-columns: repeat(1,1fr) !important;
+    padding:40px 20px
+  }
+  .presale-text,
+   .dashboard{
+    /* margin-top: 50px !important; */
+    font-size: 25px !important;
+  }
   .section-inner{
     padding: 0;
   }
@@ -1164,6 +1173,7 @@ flex-shrink: 0;
   /* height: auto; */
   
 }
+
 }
 
 /* rest of styles (hero-left, presale-card, etc.) remain unchanged */
@@ -1201,11 +1211,12 @@ flex-shrink: 0;
   border-radius: 14px;
 
   /* dark glassy panel + subtle texture */
-  background:
-    radial-gradient(120px 80px at 96% 10%, rgba(34,116,233,.22), transparent 60%),
-    radial-gradient(220px 140px at 80% -10%, rgba(34,116,233,.10), transparent 70%),
-    linear-gradient(180deg, #1E1E36 0%, #211d2c 50%);
-
+  background: linear-gradient(
+    99.6deg,
+    rgba(30, 30, 54, 0.5) 5.65%,
+    rgba(42, 37, 55, 0.5) 96.19%
+  );
+  backdrop-filter: blur(24px);
 
 }
 
@@ -1261,3 +1272,84 @@ flex-shrink: 0;
   color: transparent;
   white-space: nowrap;
 }
+.reward-card {
+  position: relative;
+  padding: 14px;
+  border-radius: 10px;
+  background: linear-gradient(
+    99.6deg,
+    rgba(30, 30, 54, 0.5) 5.65%,
+    rgba(42, 37, 55, 0.5) 96.19%
+  );
+  backdrop-filter: blur(24px);
+  z-index: 1;
+}
+
+/* Gradient border using ::before */
+.reward-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: 10px;
+  background: linear-gradient(281deg, #0D0D0D 10.28%, #2274E9 96.51%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.sub-reward-card{
+  display: flex;
+  justify-content: space-between;
+}
+.reward-text{
+  color:#FFF3FE
+}
+.points-text{
+  font-size: 32px;
+  background: linear-gradient(90deg, #1a47b8 0%, #2274E9 45%, #14427F 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+  background-clip:text;
+  color: transparent;
+  font-weight: bold;
+}
+.dashbaord-cards{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  max-width: 1050px;
+  margin: auto;
+  padding-top: 30px;
+  gap:20px
+}
+@media (max-width: 991px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    width: 260px;
+    z-index: 1200;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .hamburger-btn {
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+  }
+}
+

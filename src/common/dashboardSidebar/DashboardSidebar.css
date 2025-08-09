@@ -74,4 +74,19 @@
     min-height: 100vh;
     background-color: #1E1E1E;
   }
-  
+  /* Keep your existing styles above, only add responsive rules */
+
+/* /* Mobile hamburger topbar */
+
+@media (max-width: 1024px) {
+  .page {
+    margin-left: 0; /* No space for sidebar */
+  }
+}
+
+/* For very small screens where header takes less space */
+@media (max-width: 768px) {
+  .page {
+    padding: calc(var(--header-h-mobile) + 16px) 16px 24px;
+  }
+}
