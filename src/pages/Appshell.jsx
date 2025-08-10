@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DashboardHeader from "../common/dashboardHeader/DashboardHeader";
 import DashboardSidebar from "../common/dashboardSidebar/DashboardSidebar";
 import Dashboard from "../components/Dashboard";
@@ -9,6 +9,18 @@ import Transactions from "./Transactions";
 
 export default function AppShell({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    if (isSidebarOpen && window.innerWidth <= 1024) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isSidebarOpen]);
 
   const handleMenuToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -21,20 +33,16 @@ export default function AppShell({ children }) {
   return (
     <div className="app-shell">
       {/* Sidebar */}
-      <DashboardSidebar 
-        isOpen={isSidebarOpen} 
-        onClose={handleSidebarClose} 
-      />
+      <DashboardSidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
 
       {/* Header */}
       <DashboardHeader onMenuToggle={handleMenuToggle} />
 
       {/* Page content */}
       <main className="page" style={{ position: "relative" }}>
-        
         {children}
         {/* {/* <Dashboard /> */}
-        <Transactions /> 
+        <Transactions />
         <BuyCRT />
 
         {/* Fixed CRT Background at bottom */}
