@@ -2,6 +2,7 @@ import React from "react";
 import DashboardHeader from "../common/dashboardHeader/DashboardHeader";
 import DashboardSidebar from "../common/dashboardSidebar/DashboardSidebar";
 import Dashboard from "../components/Dashboard";
+import Transactions from "./Transactions";
 
 export default function AppShell({ children }) {
   return (
@@ -13,8 +14,10 @@ export default function AppShell({ children }) {
       <DashboardHeader />
 
       {/* Page content */}
-      <main className="page">{children}
-        <Dashboard/>
+      <main className="page">
+        {children}
+        {/* <Dashboard /> */}
+        <Transactions/>
       </main>
     </div>
   );
