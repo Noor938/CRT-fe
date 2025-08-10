@@ -10,7 +10,7 @@ import Roadmap from "./components/Roadmap";
 import Faq from "./components/Faq";
 import Hero from "./components/Hero";
 import Header from "./common/Header";
-import './index.css'
+import "./index.css";
 import Tokenmoics from "./components/Tokenomics";
 import Footer from "./common/Footer";
 import DashboardHeader from "./common/dashboardHeader/DashboardHeader";
@@ -20,8 +20,6 @@ import AppShell from "./pages/Appshell";
 function App() {
   return (
     <>
- 
-
       {/* <Header />
       <Hero />
       <WhatSeparatesCRT /> */}
@@ -35,7 +33,7 @@ function App() {
       <Footer/> */}
       {/* <DashboardHeader/>
       <DashboardSidebar/> */}
-      <AppShell/>
+      <AppShell />
     </>
   );
 }

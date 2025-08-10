@@ -2,6 +2,9 @@ import React from "react";
 import DashboardHeader from "../common/dashboardHeader/DashboardHeader";
 import DashboardSidebar from "../common/dashboardSidebar/DashboardSidebar";
 import Dashboard from "../components/Dashboard";
+import BuyCRT from "./BuyCRT";
+import crtBg from "../assets/img/crt-bg.png";
+import gradient from "../assets/img/gradient1.png";
 
 export default function AppShell({ children }) {
   return (
@@ -13,8 +16,35 @@ export default function AppShell({ children }) {
       <DashboardHeader />
 
       {/* Page content */}
-      <main className="page">{children}
-        <Dashboard/>
+      <main className="page" style={{ position: "relative" }}>
+        {children}
+        {/* <Dashboard /> */}
+        <BuyCRT />
+
+        {/* Fixed CRT Background at bottom */}
+        <img
+          src={crtBg}
+          className="fixed-crt-bg"
+          style={{
+            position: "fixed",
+            bottom: 0,
+            right: 0,
+            pointerEvents: "none",
+            width: "90%",
+          }}
+        />
+
+        {/* Fixed Gradient on right side */}
+        <img
+          src={gradient}
+          className="fixed-gradient"
+          style={{
+            position: "fixed",
+            bottom: 0,
+            right: 0,
+            pointerEvents: "none",
+          }}
+        />
       </main>
     </div>
   );
