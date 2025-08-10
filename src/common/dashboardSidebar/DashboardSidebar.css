@@ -57,21 +57,23 @@
   color: #92909a;
   font-weight: normal;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
+
 .nav-item .ico {
   width: 28px;
   height: 28px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.06);
 }
+
 .nav-item.active {
   color: #fff;
-  background: linear-gradient(90deg, #4b28a9 0%, #c655ae 85%, #c655ae 100%);
-
-  /* box-shadow: 0 6px 16px rgba(198,85,174,0.35); */
-}
-.nav-item.active .ico {
-  background: rgba(255, 255, 255, 0.18);
+  background: linear-gradient(
+    135.66deg,
+    #4b28a9 0%,
+    #c655ae 81%,
+    #c655ae 95.32%
+  );
+  box-shadow: 20px 24px 74px 0px #35009442, -8px 5px 32px 0px #d43fb5 inset;
 }
 
 /* footer bits in sidebar */

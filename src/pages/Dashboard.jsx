@@ -1,8 +1,11 @@
 import React from "react";
-import assets from "../assets/img/assets.svg";
-import gift from "../assets/img/gift.svg";
-import bonus from "../assets/img/bonus.svg";
-import bank from "../assets/img/bank.svg";
+import assets from '../assets/img/assets.svg'
+import bonus from '../assets/img/bonus.svg'
+import bank from '../assets/img/bank.svg'
+import gift from '../assets/img/gift.svg'
+
+
+
 const Dashboard = () => {
   return (
     <div>
@@ -89,26 +92,9 @@ const Dashboard = () => {
             </div>
             <img src={gift} />
           </div>
-          <div
-            style={{
-              backgroundColor: "#CED1D9",
-              borderRadius: "9999px",
-              height: "20px",
-              width: "100%",
-              overflow: "hidden",
-              marginTop: "32px",
-            }}
-          >
-            <div
-              style={{
-                height: "100%",
-                width: `${60}%`,
-                background: "linear-gradient(135deg, #2274E9 0%, #0D366D 100%)",
-                borderRadius: "9999px",
-                transition: "width 0.3s ease-in-out",
-              }}
-            ></div>
-          </div>
+          <div className="progress-bar" style={{marginTop:"32px"}}>
+              <div className="progress-fill" style={{ width: "25%" }} />
+            </div>
         </div>
       </div>
     </div>

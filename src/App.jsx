@@ -16,6 +16,10 @@ import Footer from "./common/Footer";
 import DashboardHeader from "./common/dashboardHeader/DashboardHeader";
 import DashboardSidebar from "./common/dashboardSidebar/DashboardSidebar";
 import AppShell from "./pages/Appshell";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import Transactions from "./pages/Transactions";
+import BuyCRT from "./pages/BuyCRT";
 
 function App() {
   return (
@@ -33,7 +37,15 @@ function App() {
       <Footer/> */}
       {/* <DashboardHeader/>
       <DashboardSidebar/> */}
-      <AppShell />
+    <BrowserRouter>
+      <AppShell>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/buy-crt" element={<BuyCRT />} />
+        </Routes>
+      </AppShell>
+    </BrowserRouter>
     </>
   );
 }

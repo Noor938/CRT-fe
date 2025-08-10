@@ -21,11 +21,9 @@
   margin: 0 auto;
   color: #9ca6b6;
 }
-
 .nav-link:hover {
   color: white !important;
 }
-
 .text-gradient {
   background: linear-gradient(
     90deg,
@@ -70,11 +68,9 @@
 .Separate_bg {
   position: relative;
   background: url("/assets/img/Vector28.png") center/cover no-repeat;
-  background-color: #040b19;
-  /* fallback */
+  background-color: #040b19; /* fallback */
   min-height: 900px;
 }
-
 .bg-line {
   position: absolute !important;
   left: 0;
@@ -85,13 +81,10 @@
   pointer-events: none;
   z-index: 0;
 }
-
 .Separate_bg > * {
   position: relative;
   z-index: 1;
-}
-
-/* keep content above */
+} /* keep content above */
 
 /* ========= Dark Gradient Background ========= */
 .bg-dark-gradient {
@@ -131,7 +124,6 @@
   font-size: 14px;
   color: #d7e3ff;
 }
-
 .edge-list li {
   margin-bottom: 10px;
 }
@@ -176,11 +168,9 @@
 
 .trading-section {
   position: relative;
-  background-image: url("/public/image2.png");
-  /* bottom layer only */
+  background-image: url("/public/image2.png"); /* bottom layer only */
   background-size: 108% top;
-  background-position: center 35%;
-  /* Adjust 20% to your preferred value */
+  background-position: center 35%; /* Adjust 20% to your preferred value */
   background-repeat: no-repeat;
   background-color: #000813;
   height: 100vh;
@@ -239,7 +229,6 @@
   font-size: 24px;
   font-weight: bold;
 }
-
 .trade-card-content {
   font-size: 16px;
   color: #9ca6b6;
@@ -250,22 +239,18 @@
   left: 40px;
   bottom: -74px;
 }
-
 .card2 {
   left: 300px;
   bottom: -11px;
 }
-
 .card3 {
   left: 550px;
   bottom: 47px;
 }
-
 .card4 {
   left: 790px;
   bottom: 122px;
 }
-
 .footer-wrapper {
   background-image: linear-gradient(
       to top,
@@ -308,7 +293,6 @@
   margin-top: 33px;
   cursor: pointer;
 }
-
 .centered-div {
   position: absolute;
   bottom: 0;
@@ -338,24 +322,19 @@
 
 @media (max-width: 1300px) {
   .trade-heading {
-    font-size: 40px;
-    /* smaller heading on mobile */
+    font-size: 40px; /* smaller heading on mobile */
     line-height: 1.05;
     /* margin-bottom: 16px; */
   }
 
   .card-container {
-    left: 0;
-    /* center the block */
-    height: auto;
-    /* let it grow naturally */
-    display: grid;
-    /* 1-col grid */
+    left: 0; /* center the block */
+    height: auto; /* let it grow naturally */
+    display: grid; /* 1-col grid */
     grid-template-columns: 1fr;
     gap: 16px;
     margin-top: 30px;
-    padding: 0 16px 32px;
-    /* some side padding */
+    padding: 0 16px 32px; /* some side padding */
   }
 
   /* Make each card flow in the grid (no absolute offsets) */
@@ -377,7 +356,6 @@
   .trade-card-font {
     font-size: 20px;
   }
-
   .trade-card-content {
     font-size: 14px;
   }
@@ -400,14 +378,12 @@
   padding-top: 100px;
   padding-bottom: 100px;
 }
-
 .step-card-container {
   max-width: 1050px;
   margin: auto;
   display: flex;
   margin-top: 53px !important;
 }
-
 .step-card-1 {
   /* width: 199px; */
   height: 450px;
@@ -421,7 +397,6 @@
   flex-direction: column;
   justify-content: flex-end;
 }
-
 .rest-step-card {
   width: 280px;
   height: 450px;
@@ -445,7 +420,6 @@
   color: #182d4a;
   transform: rotate(270deg);
 }
-
 .step-card-number-right {
   position: absolute;
   top: -14px;
@@ -456,7 +430,6 @@
   color: #182d4a;
   transform: rotate(270deg);
 }
-
 .step-card-number-5 {
   position: absolute;
   top: -14px;
@@ -472,7 +445,6 @@
   margin-bottom: 20px;
   text-align: start;
 }
-
 .step-card-icon img {
   width: 50px;
   height: 50px;
@@ -674,12 +646,10 @@
   opacity: 0.05;
   z-index: 0;
 }
-
 .circle-check {
   fill: #2272e4;
   flex-shrink: 0;
 }
-
 .roadmap-points {
   margin-top: 19px;
   display: flex;
@@ -687,7 +657,6 @@
   gap: 10px;
   justify-content: flex-start;
 }
-
 .roadmap-points span {
   text-align: start;
   color: "#9CA6B6";
@@ -741,7 +710,6 @@
 .text-highlight {
   color: #ffc107;
 }
-
 .presale-card {
   position: relative;
   background: linear-gradient(145deg, #0b3672 0%, #13325e 57%, #010204 100%);
@@ -790,7 +758,6 @@
   /* font-size: 14px; */
   margin: 12px 0;
 }
-
 .price-font {
   display: flex;
   gap: 2px;
@@ -861,22 +828,18 @@
   width: 125px;
   outline: none;
 }
-
 .eth-input::placeholder,
 .ustd-input::placeholder,
 .crt-input::placeholder {
   color: white;
-  opacity: 1;
-  /* Ensures it's not transparent */
+  opacity: 1; /* Ensures it's not transparent */
 }
-
 .hero-card-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 22px;
 }
-
 .crt-wrapper {
   position: relative;
   width: 100%;
@@ -941,7 +904,6 @@
   100% {
     transform: translateY(0px);
   }
-
   50% {
     transform: translateY(-12px);
   }
@@ -973,10 +935,8 @@
   left: 0;
   width: 100%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
-  backdrop-filter: blur(2px);
-  /* This creates a soft blur */
-  -webkit-backdrop-filter: blur(4px);
-  /* Safari support */
+  backdrop-filter: blur(2px); /* This creates a soft blur */
+  -webkit-backdrop-filter: blur(4px); /* Safari support */
   z-index: 50;
 }
 
@@ -1017,12 +977,10 @@
   gap: 6px;
   align-items: center;
 }
-
 .presale-btn {
   background: #214577 !important;
   border: 1px solid #031837 !important;
 }
-
 /* Trade heading */
 .trade-heading {
   font-size: 66px;
@@ -1040,23 +998,19 @@
     display: none;
   }
 }
-
 @media (max-width: 768px) {
   .dashbaord-cards {
     grid-template-columns: repeat(1, 1fr) !important;
     padding: 40px 20px;
   }
-
   .presale-text,
   .dashboard {
     /* margin-top: 50px !important; */
     font-size: 25px !important;
   }
-
   .section-inner {
     padding: 0;
   }
-
   .hero-content {
     flex-direction: column;
     padding: 20px 0;
@@ -1107,12 +1061,10 @@
     align-items: flex-start;
     gap: 10px;
   }
-
   .hero-section {
     background-image: none;
     background: radial-gradient(circle at center, #06142e 30%, #010818 100%);
   }
-
   .crt-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -1120,61 +1072,45 @@
     padding: 20px;
     height: auto;
   }
-
   .crt-box {
     position: initial;
   }
-
   .trading-content {
     position: relative;
     z-index: 2;
-    text-align: center;
-    /* center heading on mobile */
-    margin-bottom: 20px;
-    /* reduce gap between heading and cards */
+    text-align: center; /* center heading on mobile */
+    margin-bottom: 20px; /* reduce gap between heading and cards */
     /* keep content from touching edges */
   }
-
   .trade-heading br {
-    display: none;
-    /* removes line breaks on small screens */
+    display: none; /* removes line breaks on small screens */
   }
 
   .trade-heading {
-    font-size: 33px;
-    /* smaller text for mobile */
+    font-size: 33px; /* smaller text for mobile */
     /* font-weight: bold; */
-    line-height: 1.2;
-    /* tighter spacing between lines */
+    line-height: 1.2; /* tighter spacing between lines */
     margin-bottom: 16px;
     top: -20%;
     left: 3%;
   }
-
   .heading-xl {
     font-size: 33px;
   }
-
   .step-card-container {
     max-width: 100%;
     padding: 0 16px;
-    display: grid;
-    /* override flex */
-    grid-template-columns: 1fr;
-    /* single column */
-    gap: 16px;
-    /* space between cards */
-    margin-top: 24px !important;
-    /* a bit tighter on mobile */
+    display: grid; /* override flex */
+    grid-template-columns: 1fr; /* single column */
+    gap: 16px; /* space between cards */
+    margin-top: 24px !important; /* a bit tighter on mobile */
   }
 
   .step-card-1,
   .rest-step-card {
     width: 100%;
-    height: auto;
-    /* let content define height */
-    min-height: 320px;
-    /* still tall-ish */
+    height: auto; /* let content define height */
+    min-height: 320px; /* still tall-ish */
     padding: 16px;
   }
 
@@ -1183,14 +1119,10 @@
   .step-card-number-right,
   .step-card-number-5 {
     top: 6px;
-    left: -6px;
-    /* keep it barely outside the card */
-    right: auto;
-    /* cancel right-based ones */
-    font-size: 96px;
-    /* smaller for mobile */
-    transform: rotate(270deg);
-    /* same rotation */
+    left: -6px; /* keep it barely outside the card */
+    right: auto; /* cancel right-based ones */
+    font-size: 96px; /* smaller for mobile */
+    transform: rotate(270deg); /* same rotation */
   }
 
   .step-card-icon img {
@@ -1206,7 +1138,6 @@
     font-size: 14px;
     line-height: 1.5;
   }
-
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1228,22 +1159,18 @@
     width: 28px;
     height: 28px;
   }
-
   .header-btn {
     display: none;
   }
-
   .hero-section {
     padding: 154px 20px;
   }
-
   .connect-steps-section {
     background-image: linear-gradient(
       to top,
       rgb(1, 25, 55) 0%,
       rgb(36, 50, 69) 100%
-    );
-    /* Remove bg image */
+    ); /* Remove bg image */
     /* height: auto; */
   }
 }
@@ -1254,19 +1181,16 @@
     left: 0;
     width: 100%;
   }
-
   .page {
     margin-left: 0;
     padding: calc(var(--header-h) + 16px) 16px 32px;
   }
 }
-
 .presale-text {
   background: linear-gradient(90deg, #2274e9 0%, #14427f 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text;
-  /* Firefox */
+  background-clip: text; /* Firefox */
   color: transparent;
   font-size: 55px;
 }
@@ -1296,8 +1220,7 @@
   position: absolute;
   inset: 0;
   border-radius: 14px;
-  padding: 1px;
-  /* border thickness */
+  padding: 1px; /* border thickness */
   background: linear-gradient(
     90deg,
     rgba(39, 119, 233, 0.6),
@@ -1330,7 +1253,6 @@
   gap: 14px;
   min-width: 0;
 }
-
 .stat-ico {
   width: 44px;
   height: 44px;
@@ -1348,14 +1270,12 @@
 .stat-meta {
   min-width: 0;
 }
-
 .stat-title {
   color: #fff3fe;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.1;
 }
-
 .stat-sub {
   color: white;
   font-size: 13px;
@@ -1374,7 +1294,6 @@
   color: transparent;
   white-space: nowrap;
 }
-
 .reward-card {
   position: relative;
   padding: 14px;
@@ -1393,8 +1312,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  padding: 1px;
-  /* border thickness */
+  padding: 1px; /* border thickness */
   border-radius: 10px;
   background: linear-gradient(281deg, #0d0d0d 10.28%, #2274e9 96.51%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -1408,11 +1326,9 @@
   display: flex;
   justify-content: space-between;
 }
-
 .reward-text {
   color: #fff3fe;
 }
-
 .points-text {
   font-size: 32px;
   background: linear-gradient(90deg, #1a47b8 0%, #2274e9 45%, #14427f 100%);
@@ -1422,7 +1338,6 @@
   color: transparent;
   font-weight: bold;
 }
-
 .dashbaord-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1431,7 +1346,6 @@
   padding-top: 30px;
   gap: 20px;
 }
-
 @media (max-width: 991px) {
   .sidebar {
     transform: translateX(-100%);
@@ -1439,11 +1353,9 @@
     width: 260px;
     z-index: 1200;
   }
-
   .sidebar.open {
     transform: translateX(0);
   }
-
   .close-btn {
     background: none;
     border: none;
@@ -1452,7 +1364,6 @@
     margin-bottom: 10px;
     cursor: pointer;
   }
-
   .hamburger-btn {
     background: none;
     border: none;

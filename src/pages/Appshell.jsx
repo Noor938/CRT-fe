@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import DashboardHeader from "../common/dashboardHeader/DashboardHeader";
 import DashboardSidebar from "../common/dashboardSidebar/DashboardSidebar";
-import Dashboard from "../components/Dashboard";
 import BuyCRT from "./BuyCRT";
 import crtBg from "../assets/img/crt-bg.png";
 import gradient from "../assets/img/gradient1.png";
 import Transactions from "./Transactions";
+import Dashboard from "./Dashboard";
 
 export default function AppShell({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -41,9 +41,9 @@ export default function AppShell({ children }) {
       {/* Page content */}
       <main className="page" style={{ position: "relative" }}>
         {children}
-        {/* {/* <Dashboard /> */}
-        <Transactions />
-        <BuyCRT />
+    {/* <Dashboard /> */}
+        {/* <Transactions />
+        <BuyCRT /> */}
 
         {/* Fixed CRT Background at bottom */}
         <img
