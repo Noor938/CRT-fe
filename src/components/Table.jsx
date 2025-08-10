@@ -1,6 +1,7 @@
 import React from 'react'
 import bitcoin from '../assets/img/bitcoin.svg'
 import { CiMenuKebab } from 'react-icons/ci'
+import '../styles/table.css'
 
 const Table = () => {
   return (
