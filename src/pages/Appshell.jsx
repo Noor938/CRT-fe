@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardHeader from "../common/dashboardHeader/DashboardHeader";
 import DashboardSidebar from "../common/dashboardSidebar/DashboardSidebar";
 import Dashboard from "../components/Dashboard";
@@ -7,13 +7,26 @@ import crtBg from "../assets/img/crt-bg.png";
 import gradient from "../assets/img/gradient1.png";
 
 export default function AppShell({ children }) {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const handleSidebarClose = () => {
+    setIsSidebarOpen(false);
+  };
+
   return (
     <div className="app-shell">
       {/* Sidebar */}
-      <DashboardSidebar />
+      <DashboardSidebar 
+        isOpen={isSidebarOpen} 
+        onClose={handleSidebarClose} 
+      />
 
       {/* Header */}
-      <DashboardHeader />
+      <DashboardHeader onMenuToggle={handleMenuToggle} />
 
       {/* Page content */}
       <main className="page" style={{ position: "relative" }}>
