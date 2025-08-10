@@ -1,92 +1,257 @@
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: var(--sidebar-w);
-    z-index: 1000;
-    background: linear-gradient(
-      260deg,
-      #11315e 0%,       /* bright blue at top */
-      #252229 15%,      /* fade into original dark */
-      #222027 31%,
-      #1C1A23 100%
-    );
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
-    overflow-y: auto;
-  }
-  
-  
-  
-  .side-inner {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 22px 18px;
-    gap: 10px;
-  }
-  
-  .side-brand { margin-bottom: 18px; }
-  
-  .nav-item {
-    height: 44px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 0 14px;
-    border-radius: 10px;
-    color: #92909A;
-    font-weight: normal;
-    text-decoration: none;
-    
-  }
-  .nav-item .ico {
-    width: 28px; height: 28px; border-radius: 6px;
-    background: rgba(255,255,255,0.06);
-  }
-  .nav-item.active {
-    color: #fff;
-    background: linear-gradient(90deg, #4b28a9 0%, #c655ae 85%, #c655ae 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--sidebar-w);
+  z-index: 1000;
+  background: linear-gradient(
+    260deg,
+    #11315e 0%,
+    /* bright blue at top */ #252229 15%,
+    /* fade into original dark */ #222027 31%,
+    #1c1a23 100%
+  );
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
 
-    /* box-shadow: 0 6px 16px rgba(198,85,174,0.35); */
-  }
-  .nav-item.active .ico { background: rgba(255,255,255,0.18); }
-  
-  /* footer bits in sidebar */
-  .social-row { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
-  .social {
-    height: 36px; border-radius: 8px; border: 0;
-    background: linear-gradient(180deg, rgba(41,73,160,0.12) 0%, rgba(14,13,14,0) 66.88%);
-    box-shadow: inset 4px 4px 24px #1E4BEC22;
-    backdrop-filter: blur(8px);
-  }
-  .disconnect {
-    height: 46px; margin-top: 14px;
-    border-radius: 10px; border: 0;
-    background: #181722; color: #FFF3FE; font-weight: 700;
-  }
-  .copy { text-align: center; font-size: 12px; color: #524D5F; margin-top: 10px; }
-  
-  /* content area accounts for fixed header + sidebar */
-  .page {
-    margin-left: var(--sidebar-w);                   /* space for sidebar */
-    padding: calc(var(--header-h) + 24px) 24px 40px; /* space for header */
-    min-height: 100vh;
-    background-color: #1E1E1E;
-  }
-  /* Keep your existing styles above, only add responsive rules */
+/* Mobile overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 
-/* /* Mobile hamburger topbar */
+.sidebar-overlay.active {
+  opacity: 1;
+}
 
+.side-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 18px;
+  gap: 10px;
+}
+
+.side-brand {
+  margin-bottom: 18px;
+}
+
+.nav-item {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px;
+  border-radius: 10px;
+  color: #92909a;
+  font-weight: normal;
+  text-decoration: none;
+}
+.nav-item .ico {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+}
+.nav-item.active {
+  color: #fff;
+  background: linear-gradient(90deg, #4b28a9 0%, #c655ae 85%, #c655ae 100%);
+
+  /* box-shadow: 0 6px 16px rgba(198,85,174,0.35); */
+}
+.nav-item.active .ico {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* footer bits in sidebar */
+.social-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.social {
+  height: 36px;
+  border-radius: 8px;
+  border: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(41, 73, 160, 0.12) 0%,
+    rgba(14, 13, 14, 0) 66.88%
+  );
+  box-shadow: inset 4px 4px 24px #1e4bec22;
+  backdrop-filter: blur(8px);
+}
+.disconnect {
+  height: 46px;
+  margin-top: 14px;
+  border-radius: 10px;
+  border: 0;
+  background: #181722;
+  color: #fff3fe;
+  font-weight: 700;
+}
+.copy {
+  text-align: center;
+  font-size: 12px;
+  color: #524d5f;
+  margin-top: 10px;
+}
+
+/* Close button for mobile */
+.close-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 10px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* content area accounts for fixed header + sidebar */
+.page {
+  margin-left: var(--sidebar-w); /* space for sidebar */
+  padding: calc(var(--header-h) + 24px) 24px 40px; /* space for header */
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive Design */
 @media (max-width: 1024px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 280px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sidebar-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .close-btn {
+    display: block;
+  }
+
   .page {
-    margin-left: 0; /* No space for sidebar */
+    margin-left: 0;
+    padding: calc(var(--header-h) + 16px) 16px 32px;
+  }
+
+  .side-inner {
+    padding: 16px 14px;
+  }
+
+  .nav-item {
+    height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+
+  .social-row {
+    gap: 8px;
+  }
+
+  .social {
+    height: 32px;
+  }
+
+  .disconnect {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .copy {
+    font-size: 11px;
   }
 }
 
-/* For very small screens where header takes less space */
 @media (max-width: 768px) {
-  .page {
-    padding: calc(var(--header-h-mobile) + 16px) 16px 24px;
+  .sidebar {
+    width: 260px;
+  }
+
+  .side-inner {
+    padding: 12px 10px;
+  }
+
+  .nav-item {
+    height: 36px;
+    padding: 0 10px;
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .social-row {
+    gap: 6px;
+  }
+
+  .social {
+    height: 28px;
+  }
+
+  .disconnect {
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .copy {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 240px;
+  }
+
+  .side-inner {
+    padding: 10px 8px;
+  }
+
+  .nav-item {
+    height: 32px;
+    padding: 0 8px;
+    font-size: 12px;
+    gap: 8px;
+  }
+
+  .social-row {
+    gap: 4px;
+  }
+
+  .social {
+    height: 24px;
+  }
+
+  .disconnect {
+    height: 32px;
+    font-size: 12px;
+  }
+
+  .copy {
+    font-size: 9px;
   }
 }

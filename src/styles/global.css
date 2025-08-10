@@ -21,8 +21,8 @@
   margin: 0 auto;
   color: #9ca6b6;
 }
-.nav-link:hover {
-  color: white !important;
+.nav-link:hover  {
+  color:  white !important;;
 }
 .text-gradient {
   background: linear-gradient(

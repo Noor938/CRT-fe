@@ -1,0 +1,286 @@
+/* Buy CRT Page - matches glassy neon style used across the app */
+
+.buycrt-page {
+  color: #fff;
+}
+
+.buycrt-title {
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.buycrt-card {
+  margin-top: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.buycrt-content {
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(
+    99.6deg,
+    rgb(30 30 54) 5.65%,
+    rgb(42 37 55) 96.19%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.stage-pill {
+  position: absolute;
+  z-index: 1;
+  top: -39px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    99.6deg,
+    rgb(30 30 54) 5.65%,
+    rgb(42 37 55) 96.19%
+  );
+  border: 1px solid;
+  border-image-source: linear-gradient(281deg, #0d0d0d 10.28%, #2274e9 96.51%);
+  padding: 6px 50px 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Progress area */
+
+.progress-bar {
+  height: 20px;
+  background: #342a3c99;
+  border-radius: 10px;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #2274e9 0%, #0d366d 100%);
+  border-radius: 10px;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.progress-labels .muted {
+  color: #92909a;
+}
+
+.progress-labels .muted b {
+  color: #fff;
+}
+
+.buycrt-card-divider {
+  margin: 20px 0;
+  border: 1px solid #2f2d3b;
+}
+
+/* Form */
+.buycrt-form {
+  margin-top: 18px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: end;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  color: #e3e0ec;
+  font-size: 14px;
+}
+
+.text-input {
+  width: 100%;
+  height: 46px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: none;
+  background: #342a3c99;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+}
+
+.text-input::placeholder {
+  color: #e6ecff;
+  opacity: 0.85;
+}
+
+.select-shell {
+  position: relative;
+}
+.select-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  height: 46px;
+  padding: 0 36px 0 14px;
+  border-radius: 10px;
+  border: none;
+  background: #342a3c99;
+  color: #fff;
+  font-size: 14px;
+}
+
+.select-input option {
+  background: #342a3c99;
+  color: #fff;
+}
+
+.select-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.coin-ico {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  background: #142a50;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.chev {
+  opacity: 0.8;
+}
+
+.input-with-prefix {
+  position: relative;
+}
+.input-with-prefix .coin-ico {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.input-with-prefix .text-input {
+  padding-left: 46px;
+}
+
+/* You Pay composite control */
+.amount-select {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  background: #342a3c99;
+  border-radius: 10px;
+  height: 46px;
+  padding: 0 10px 0 44px;
+  border: none;
+}
+.amount-select .coin-ico {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.amount-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.promo-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.promo-input-wrapper .text-input {
+  padding-right: 80px;
+}
+
+.promo-apply-btn {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 46px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background: linear-gradient(
+    135.66deg,
+    #4b28a9 0%,
+    #c655ae 81%,
+    #c655ae 95.32%
+  );
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.actions-row {
+  display: flex;
+  gap: 12px;
+}
+.actions-row .grow {
+  flex: 1;
+}
+
+.btn {
+  height: 46px;
+  padding: 0 22px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  background: rgba(32, 69, 119, 0.35);
+  border-color: #0c1b2f;
+  color: #fff;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    135.66deg,
+    #4b28a9 0%,
+    #c655ae 81%,
+    #c655ae 95.32%
+  );
+  box-shadow: 20px 24px 74px 0px #35009442;
+  color: #fff;
+  border: none;
+  width: 100%;
+  margin-top: 12px;
+}
+
+@media (max-width: 992px) {
+  .progress-labels {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
